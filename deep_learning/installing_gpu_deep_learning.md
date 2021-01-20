@@ -16,13 +16,13 @@ Compatibility matrix for Windows:
 
 ![Compatibility matrix for Windows][comp_linux]
 
-[comp_linux]: images/compatibility_windows.png "Compatibility matrix for Windows"
+[comp_linux]: images/compatibility_windows.PNG "Compatibility matrix for Windows"
 
 Compatibility matrix for Linux:
 
 ![Compatibility matrix for Linux][comp_linux]
 
-[comp_linux]: images/compatibility_linux.png "Compatibility matrix for Linux"
+[comp_linux]: images/compatibility_linux.PNG "Compatibility matrix for Linux"
 
 For both Windows and Linux, CUDA and cuDNN need to be installed.
 
