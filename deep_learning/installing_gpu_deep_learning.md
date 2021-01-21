@@ -142,4 +142,38 @@ Congratulations! Now you can run deep learning algorithms on your computer's GPU
 
 ## Installation on Linux (Ubuntu 20.04)
 
-Work in progress
+Installing on Linux tends to be harder mostly due to the quality of the NVIDIA drivers. However, I have found it to be straightfoward by following the instructions on tensorflow.org/install/gpu and by installing CUDA with apt.
+
+The instructions available in the above page are for Ubuntu 18.04 but it is relatively straightforward to modify the commands for Ubuntu 20.04.
+
+By following the below instructions, you should be able to install the NVIDIA drivers, CUDA and cuDNN on Ubuntu 20.04:
+
+```bash
+# Add NVIDIA package repositories
+$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
+$ sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
+$ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+$ sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
+$ sudo apt-get update
+
+$ wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+
+$ sudo apt install ./nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+$ sudo apt-get update
+
+# Install NVIDIA driver
+$ sudo apt-get install --no-install-recommends nvidia-driver-450
+# Reboot. Check that GPUs are visible using the command: nvidia-smi
+
+$ wget https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/libnvinfer7_7.1.3-1+cuda11.0_amd64.deb
+$ sudo apt install ./libnvinfer7_7.1.3-1+cuda11.0_amd64.deb
+$ sudo apt-get update
+
+# Install development and runtime libraries (~4GB)
+$ sudo apt-get install --no-install-recommends \
+    cuda-11-0 \
+    libcudnn8=8.0.4.30-1+cuda11.0  \
+    libcudnn8-dev=8.0.4.30-1+cuda11.0
+```
+
+Once this is done, you can follow the guide for Windows on [testing and verification](#Final-checks-and-verification).
