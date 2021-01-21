@@ -142,7 +142,7 @@ Congratulations! Now you can run deep learning algorithms on your computer's GPU
 
 ## Installation on Linux (Ubuntu 20.04)
 
-Installing on Linux tends to be harder mostly due to the quality of the NVIDIA drivers. However, I have found it to be straightfoward by following the instructions on tensorflow.org/install/gpu and by installing CUDA with apt.
+Installing on Linux tends to be harder mostly due to the quality of the NVIDIA drivers. However, I have found it to be straightfoward by following the instructions on [tensorflow.org/install/gpu](https://www.tensorflow.org/install/gpu) and by installing CUDA with apt.
 
 The instructions available in the above page are for Ubuntu 18.04 but it is relatively straightforward to modify the commands for Ubuntu 20.04.
 
