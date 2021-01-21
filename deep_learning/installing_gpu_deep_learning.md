@@ -176,4 +176,6 @@ $ sudo apt-get install --no-install-recommends \
     libcudnn8-dev=8.0.4.30-1+cuda11.0
 ```
 
-Once this is done, you can follow the guide for Windows on [testing and verification](#Final-checks-and-verification).
+Once this is done, you can follow the guide for Windows on [testing and verification](#Final-checks-and-verification). You can disregard the information on the environment variables, these should have been set up correctly during the installation.
+
+Congratulations! You can now use the GPU for deep learning tasks!
